@@ -692,6 +692,216 @@ html.subpage {
     margin-top: 0.75rem;
 }
 
+.subpage-block ul.subpage-list {
+    margin: 0.5rem 0 0;
+    padding-left: 1.25rem;
+    line-height: 1.8;
+    color: #333;
+    font-size: 0.98rem;
+}
+
+.subpage-block ul.subpage-list li + li {
+    margin-top: 0.35rem;
+}
+
+.subpage-block .dummy-note {
+    margin-top: 0.85rem;
+    padding: 0.65rem 0.9rem;
+    background: #f9fafb;
+    border-radius: 0.5rem;
+    font-size: 0.85rem;
+    line-height: 1.55;
+    color: #6b7280;
+}
+
+.history-entry {
+    margin-bottom: 1.5rem;
+    padding-bottom: 1.5rem;
+    border-bottom: 1px solid #eee;
+}
+
+.history-entry:last-child {
+    border-bottom: none;
+    margin-bottom: 0;
+    padding-bottom: 0;
+}
+
+.history-entry__period {
+    font-size: 0.78rem;
+    font-weight: 600;
+    color: #6b7280;
+    letter-spacing: 0.02em;
+    margin-bottom: 0.3rem;
+}
+
+.history-entry__title {
+    font-size: 1.05rem;
+    font-weight: 700;
+    margin: 0 0 0.3rem;
+    color: #111;
+}
+
+.history-entry__meta {
+    font-size: 0.9rem;
+    color: #555;
+    margin: 0 0 0.5rem;
+}
+
+.history-entry ul {
+    margin: 0;
+    padding-left: 1.15rem;
+    font-size: 0.92rem;
+    color: #444;
+    line-height: 1.65;
+}
+
+.history-entry ul li + li {
+    margin-top: 0.25rem;
+}
+
+.award-list {
+    margin: 0.5rem 0 0;
+    padding: 0;
+    list-style: none;
+}
+
+.award-list li {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.35rem 0.75rem;
+    padding: 0.65rem 0;
+    border-bottom: 1px solid #f0f0f0;
+    font-size: 0.95rem;
+    line-height: 1.5;
+}
+
+.award-list li:last-child {
+    border-bottom: none;
+}
+
+.award-list__year {
+    flex: 0 0 3.5rem;
+    font-weight: 700;
+    color: #1e3d32;
+}
+
+.award-list__body {
+    flex: 1;
+    min-width: 200px;
+    color: #333;
+}
+
+.portfolio-dummy-grid {
+    display: grid;
+    gap: 1.25rem;
+    margin-top: 0.75rem;
+}
+
+@media (min-width: 640px) {
+    .portfolio-dummy-grid--featured {
+        grid-template-columns: 1fr 1fr;
+    }
+}
+
+.portfolio-dummy-card {
+    border: 1px solid #e8e0ff;
+    border-radius: 0.85rem;
+    padding: 1.15rem 1.2rem;
+    background: linear-gradient(165deg, #faf8ff 0%, #fff 55%);
+}
+
+.portfolio-dummy-card h3 {
+    margin: 0 0 0.35rem;
+    font-size: 1.05rem;
+    font-weight: 700;
+    color: #2d2450;
+}
+
+.portfolio-dummy-card .role {
+    font-size: 0.78rem;
+    color: #6b21a8;
+    font-weight: 600;
+    margin: 0 0 0.5rem;
+}
+
+.portfolio-dummy-card p {
+    margin: 0;
+    font-size: 0.92rem;
+    line-height: 1.65;
+    color: #444;
+}
+
+.portfolio-dummy-card .dummy-links {
+    margin-top: 0.85rem;
+    font-size: 0.86rem;
+}
+
+.portfolio-dummy-card .dummy-links a {
+    color: #5b21b6;
+    font-weight: 500;
+    margin-right: 0.85rem;
+}
+
+.project-row {
+    padding: 0.95rem 0;
+    border-bottom: 1px solid #eee;
+}
+
+.project-row:last-child {
+    border-bottom: none;
+}
+
+.project-row__name {
+    font-weight: 600;
+    color: #111;
+    margin-bottom: 0.2rem;
+}
+
+.project-row__meta {
+    font-size: 0.8rem;
+    color: #6b7280;
+    margin-bottom: 0.35rem;
+}
+
+.project-row__desc {
+    margin: 0;
+    font-size: 0.9rem;
+    color: #555;
+    line-height: 1.6;
+}
+
+.stack-group {
+    margin-bottom: 1.35rem;
+}
+
+.stack-group:last-child {
+    margin-bottom: 0;
+}
+
+.stack-group h3 {
+    font-size: 0.82rem;
+    font-weight: 700;
+    color: #6b7280;
+    text-transform: uppercase;
+    letter-spacing: 0.07em;
+    margin: 0 0 0.55rem;
+}
+
+.tag-row {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.45rem;
+}
+
+.tag {
+    display: inline-block;
+    padding: 0.32rem 0.7rem;
+    font-size: 0.82rem;
+    background: #f3f4f6;
+    border-radius: 999px;
+    color: #374151;
+}
+
 .page-footer {
     padding: clamp(2.5rem, 5vw, 4rem) 1.5rem;
     background: linear-gradient(180deg, #141418 0%, #0c0c0f 100%);
