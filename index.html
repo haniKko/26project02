@@ -35,6 +35,7 @@
                     <li><a href="history.html">이력</a></li>
                     <li><a href="portfolio.html">포트폴리오</a></li>
                     <li><a href="contact.html">contact</a></li>
+                    <li><a href="guestbook.html">방명록</a></li>
                 </ul>
             </nav>
         </div>
@@ -89,17 +90,7 @@
         </section>
 
         <section id="portfolio" class="full-section full-section--portfolio" aria-labelledby="portfolio-title">
-            <div class="full-section__inner">
-                <figure class="section-visual anim-text">
-                    <img
-                        src="https://images.unsplash.com/photo-1558655146-d09347e92766?auto=format&fit=crop&w=880&h=660&q=80"
-                        alt="색과 레이아웃 스케치가 있는 창의적인 작업 책상 풍경"
-                        width="880"
-                        height="660"
-                        loading="lazy"
-                        decoding="async"
-                    />
-                </figure>
+            <div class="full-section__inner full-section__inner--portfolio">
                 <p class="section-eyebrow anim-text">Portfolio</p>
                 <h2 id="portfolio-title" class="section-title">
                     <span class="anim-text__word">만들고</span>
@@ -107,8 +98,96 @@
                     <span class="anim-text__word">것들</span>
                 </h2>
                 <p class="section-lead anim-text anim-text--delay-3">
-                    작업물과 아이디어를 모아 두는 공간이에요. 이미지·링크·설명을 추가하면 한눈에 보기 좋아집니다.
+                    기획 과정에서 나온 결과물을 스와이프로 살펴보세요. 카드 내용은 실제 산출물에 맞게 바꿀 수 있어요.
                 </p>
+
+                <div class="portfolio-swipe-wrap anim-text anim-text--delay-3">
+                    <p class="portfolio-swipe-hint" id="portfolio-swipe-hint">좌우로 스와이프 · 점 버튼으로 이동</p>
+                    <div
+                        class="portfolio-swipe"
+                        id="portfolio-swipe"
+                        tabindex="0"
+                        role="region"
+                        aria-roledescription="캐러셀"
+                        aria-labelledby="portfolio-title"
+                        aria-describedby="portfolio-swipe-hint"
+                    >
+                        <article class="portfolio-card portfolio-swipe__slide">
+                            <figure class="portfolio-card__media">
+                                <img
+                                    src="https://images.unsplash.com/photo-1552664730-d307ca884978?auto=format&fit=crop&w=640&h=400&q=80"
+                                    alt="회의실에서 스티커 보드로 아이디어를 정리하는 팀"
+                                    width="640"
+                                    height="400"
+                                    loading="lazy"
+                                    decoding="async"
+                                />
+                            </figure>
+                            <div class="portfolio-card__body">
+                                <span class="portfolio-card__tag">기획 결과물 01</span>
+                                <h3 class="portfolio-card__title">리서치 · 인사이트 정리</h3>
+                                <p class="portfolio-card__desc">시장·사용자 조사 요약, 문제 정의, 핵심 인사이트 도출 과정을 담은 문서입니다.</p>
+                            </div>
+                        </article>
+                        <article class="portfolio-card portfolio-swipe__slide">
+                            <figure class="portfolio-card__media">
+                                <img
+                                    src="https://images.unsplash.com/photo-1517245386807-bb43f82c33c4?auto=format&fit=crop&w=640&h=400&q=80"
+                                    alt="협업과 기획 논의를 하는 모습"
+                                    width="640"
+                                    height="400"
+                                    loading="lazy"
+                                    decoding="async"
+                                />
+                            </figure>
+                            <div class="portfolio-card__body">
+                                <span class="portfolio-card__tag">기획 결과물 02</span>
+                                <h3 class="portfolio-card__title">페르소나 · 사용자 여정</h3>
+                                <p class="portfolio-card__desc">타깃 정의, 니즈·페인포인트, 터치포인트별 여정 맵을 시각화한 산출물입니다.</p>
+                            </div>
+                        </article>
+                        <article class="portfolio-card portfolio-swipe__slide">
+                            <figure class="portfolio-card__media">
+                                <img
+                                    src="https://images.unsplash.com/photo-1504384308090-c894fdcc538d?auto=format&fit=crop&w=640&h=400&q=80"
+                                    alt="노트북과 도구가 놓인 작업 공간"
+                                    width="640"
+                                    height="400"
+                                    loading="lazy"
+                                    decoding="async"
+                                />
+                            </figure>
+                            <div class="portfolio-card__body">
+                                <span class="portfolio-card__tag">기획 결과물 03</span>
+                                <h3 class="portfolio-card__title">IA · 와이어프레임</h3>
+                                <p class="portfolio-card__desc">정보 구조 설계와 핵심 화면의 저충실도 와이어로 흐름을 검증한 자료입니다.</p>
+                            </div>
+                        </article>
+                        <article class="portfolio-card portfolio-swipe__slide">
+                            <figure class="portfolio-card__media">
+                                <img
+                                    src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&w=640&h=400&q=80"
+                                    alt="노트북 화면의 차트와 데이터"
+                                    width="640"
+                                    height="400"
+                                    loading="lazy"
+                                    decoding="async"
+                                />
+                            </figure>
+                            <div class="portfolio-card__body">
+                                <span class="portfolio-card__tag">기획 결과물 04</span>
+                                <h3 class="portfolio-card__title">기획안 · 과제 정의</h3>
+                                <p class="portfolio-card__desc">목표·범위·일정·리스크·성공 지표를 정리한 최종 기획안 및 실행 과제 목록입니다.</p>
+                            </div>
+                        </article>
+                    </div>
+                    <div class="portfolio-swipe__dots" role="tablist" aria-label="기획 결과물 선택">
+                        <button type="button" class="portfolio-swipe__dot is-active" role="tab" aria-selected="true" aria-controls="portfolio-swipe" data-index="0" aria-label="1번 결과물 보기"></button>
+                        <button type="button" class="portfolio-swipe__dot" role="tab" aria-selected="false" data-index="1" aria-label="2번 결과물 보기"></button>
+                        <button type="button" class="portfolio-swipe__dot" role="tab" aria-selected="false" data-index="2" aria-label="3번 결과물 보기"></button>
+                        <button type="button" class="portfolio-swipe__dot" role="tab" aria-selected="false" data-index="3" aria-label="4번 결과물 보기"></button>
+                    </div>
+                </div>
             </div>
         </section>
 
@@ -204,7 +283,8 @@
                 <nav class="footer-col anim-text anim-text--delay-3" aria-label="연락 하위 메뉴">
                     <h3 class="footer-col__title">contact</h3>
                     <ul class="footer-col__list">
-                        <li><a href="contact.html#info">문의 안내</a></li>
+                        <li><a href="contact.html#inquiry">문의 남기기</a></li>
+                        <li><a href="guestbook.html">방명록</a></li>
                         <li><a href="mailto:hello@example.com">이메일 보내기</a></li>
                         <li><a href="index.html#site-footer">푸터 정보</a></li>
                     </ul>
@@ -234,6 +314,70 @@
 
             sections.forEach(function (section) {
                 observer.observe(section);
+            });
+        })();
+    </script>
+    <script>
+        (function () {
+            var track = document.getElementById("portfolio-swipe");
+            if (!track) return;
+
+            var slides = track.querySelectorAll(".portfolio-swipe__slide");
+            var dotsWrap = document.querySelector(".portfolio-swipe__dots");
+            var dots = dotsWrap ? dotsWrap.querySelectorAll(".portfolio-swipe__dot") : [];
+            var reduceMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+
+            function scrollOpts() {
+                return { behavior: reduceMotion ? "auto" : "smooth", inline: "center", block: "nearest" };
+            }
+
+            function setActive(i) {
+                for (var d = 0; d < dots.length; d++) {
+                    var on = d === i;
+                    dots[d].classList.toggle("is-active", on);
+                    dots[d].setAttribute("aria-selected", on ? "true" : "false");
+                }
+            }
+
+            function nearestIndex() {
+                var x = track.scrollLeft;
+                var best = 0;
+                var bestDist = Infinity;
+                for (var i = 0; i < slides.length; i++) {
+                    var dist = Math.abs(slides[i].offsetLeft - x);
+                    if (dist < bestDist) {
+                        bestDist = dist;
+                        best = i;
+                    }
+                }
+                return best;
+            }
+
+            var scrollTimer;
+            track.addEventListener("scroll", function () {
+                clearTimeout(scrollTimer);
+                scrollTimer = setTimeout(function () {
+                    setActive(nearestIndex());
+                }, 60);
+            }, { passive: true });
+
+            for (var b = 0; b < dots.length; b++) {
+                (function (idx) {
+                    dots[idx].addEventListener("click", function () {
+                        slides[idx].scrollIntoView(scrollOpts());
+                        setActive(idx);
+                    });
+                })(b);
+            }
+
+            track.addEventListener("keydown", function (e) {
+                if (e.key !== "ArrowLeft" && e.key !== "ArrowRight") return;
+                e.preventDefault();
+                var i = nearestIndex();
+                if (e.key === "ArrowLeft") i = Math.max(0, i - 1);
+                else i = Math.min(slides.length - 1, i + 1);
+                slides[i].scrollIntoView(scrollOpts());
+                setActive(i);
             });
         })();
     </script>

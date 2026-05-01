@@ -434,6 +434,153 @@
             }
         }
 
+/* ---- Portfolio swipe (기획 결과물) ---- */
+.full-section__inner--portfolio {
+    max-width: min(100%, 920px);
+}
+
+.portfolio-swipe-wrap {
+    margin-top: 1.5rem;
+    width: 100%;
+    text-align: center;
+}
+
+.portfolio-swipe-hint {
+    margin: 0 0 0.65rem;
+    font-size: 0.8rem;
+    font-weight: 500;
+    opacity: 0.72;
+}
+
+.portfolio-swipe {
+    display: flex;
+    gap: 1rem;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    scroll-padding-inline: 1.25rem;
+    padding: 0.35rem 1.25rem 1rem;
+    margin: 0 -0.5rem;
+    -webkit-overflow-scrolling: touch;
+    overscroll-behavior-x: contain;
+    touch-action: pan-x pinch-zoom;
+    scrollbar-color: rgba(45, 36, 80, 0.35) transparent;
+    outline: none;
+}
+
+.portfolio-swipe:focus-visible {
+    box-shadow: 0 0 0 2px #2d2450;
+    border-radius: 0.75rem;
+}
+
+.portfolio-swipe::-webkit-scrollbar {
+    height: 7px;
+}
+
+.portfolio-swipe::-webkit-scrollbar-thumb {
+    background: rgba(45, 36, 80, 0.35);
+    border-radius: 999px;
+}
+
+.portfolio-swipe__slide {
+    scroll-snap-align: center;
+    flex: 0 0 min(86vw, 300px);
+    max-width: 300px;
+}
+
+.portfolio-card {
+    height: 100%;
+    text-align: left;
+    background: rgba(255, 255, 255, 0.58);
+    border-radius: 1.15rem;
+    overflow: hidden;
+    box-shadow:
+        0 16px 36px rgba(45, 36, 80, 0.14),
+        0 0 0 1px rgba(255, 255, 255, 0.5) inset;
+}
+
+.portfolio-card__media {
+    margin: 0;
+    aspect-ratio: 16 / 10;
+    overflow: hidden;
+}
+
+.portfolio-card__media img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+.portfolio-card__body {
+    padding: 1rem 1.1rem 1.15rem;
+}
+
+.portfolio-card__tag {
+    display: inline-block;
+    font-size: 0.72rem;
+    font-weight: 700;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    color: #5c4a9e;
+    margin-bottom: 0.35rem;
+}
+
+.portfolio-card__title {
+    margin: 0 0 0.45rem;
+    font-size: 1.05rem;
+    font-weight: 700;
+    line-height: 1.35;
+    color: #2d2450;
+}
+
+.portfolio-card__desc {
+    margin: 0;
+    font-size: 0.875rem;
+    line-height: 1.65;
+    color: #3d3558;
+    opacity: 0.92;
+}
+
+.portfolio-swipe__dots {
+    display: flex;
+    justify-content: center;
+    gap: 0.45rem;
+    margin-top: 0.35rem;
+    padding-bottom: 0.15rem;
+}
+
+.portfolio-swipe__dot {
+    width: 8px;
+    height: 8px;
+    padding: 0;
+    border: none;
+    border-radius: 50%;
+    background: rgba(45, 36, 80, 0.28);
+    cursor: pointer;
+    transition: transform 0.15s ease, background 0.15s ease;
+}
+
+.portfolio-swipe__dot:hover,
+.portfolio-swipe__dot:focus-visible {
+    background: rgba(45, 36, 80, 0.5);
+    transform: scale(1.15);
+}
+
+.portfolio-swipe__dot.is-active {
+    background: #2d2450;
+    transform: scale(1.2);
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .portfolio-swipe {
+        scroll-behavior: auto;
+    }
+
+    .portfolio-swipe__dot {
+        transition: none;
+    }
+}
+
 /* ---- Subpages ---- */
 html.subpage {
     scroll-snap-type: none;
@@ -554,4 +701,387 @@ html.subpage {
 .page-footer .footer-grid {
     max-width: 1200px;
     margin: 0 auto;
+}
+
+/* ---- Contact inquiry page ---- */
+.subpage-main--contact {
+    background: #fff;
+    padding-top: 5.25rem;
+    padding-bottom: 3rem;
+}
+
+.contact-page {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 1.25rem 1.5rem 2.5rem;
+}
+
+.contact-page__back {
+    display: inline-block;
+    margin-bottom: 1.75rem;
+    font-size: 0.9rem;
+    font-weight: 500;
+    color: #333;
+    text-decoration: none;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.25);
+}
+
+.contact-page__back:hover,
+.contact-page__back:focus-visible {
+    color: #000;
+    border-bottom-color: #000;
+}
+
+.contact-layout {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) minmax(0, 1.15fr);
+    gap: clamp(1.75rem, 4vw, 3.5rem);
+    align-items: start;
+}
+
+@media (max-width: 880px) {
+    .contact-layout {
+        grid-template-columns: 1fr;
+    }
+}
+
+.contact-aside {
+    background: #f3f4f6;
+    border-radius: 1rem;
+    padding: clamp(1.5rem, 4vw, 2.25rem);
+}
+
+.contact-aside__title {
+    margin: 0 0 1rem;
+    font-size: clamp(1.5rem, 3.5vw, 1.85rem);
+    font-weight: 700;
+    letter-spacing: -0.03em;
+    color: #111;
+}
+
+.contact-aside__text {
+    margin: 0 0 1.5rem;
+    font-size: 0.95rem;
+    line-height: 1.75;
+    color: #444;
+}
+
+.contact-details {
+    margin: 0;
+    padding: 0;
+}
+
+.contact-details__row {
+    margin-bottom: 1.15rem;
+}
+
+.contact-details__row:last-of-type {
+    margin-bottom: 0;
+}
+
+.contact-details__label {
+    margin: 0 0 0.25rem;
+    font-size: 0.8rem;
+    font-weight: 600;
+    color: #6b7280;
+}
+
+.contact-details__value {
+    margin: 0;
+    font-size: 0.92rem;
+    line-height: 1.6;
+    color: #111;
+}
+
+.contact-details__value a {
+    color: #111;
+    text-decoration: underline;
+    text-underline-offset: 2px;
+}
+
+.contact-aside__link-wrap {
+    margin: 1.5rem 0 0;
+}
+
+.contact-aside__link {
+    font-size: 0.95rem;
+    font-weight: 600;
+    color: #2563eb;
+    text-decoration: none;
+}
+
+.contact-aside__link:hover,
+.contact-aside__link:focus-visible {
+    text-decoration: underline;
+}
+
+.contact-form-column {
+    padding-top: 0.25rem;
+}
+
+.contact-form__title {
+    margin: 0 0 0.75rem;
+    font-size: clamp(1.45rem, 3.2vw, 1.75rem);
+    font-weight: 700;
+    letter-spacing: -0.02em;
+    color: #111;
+}
+
+.contact-form__lead {
+    margin: 0 0 1.5rem;
+    font-size: 0.9rem;
+    line-height: 1.75;
+    color: #4b5563;
+}
+
+.contact-form {
+    display: flex;
+    flex-direction: column;
+    gap: 1.1rem;
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+    gap: 0.4rem;
+}
+
+.form-label {
+    font-size: 0.9rem;
+    font-weight: 600;
+    color: #111;
+}
+
+.form-required {
+    color: #dc2626;
+    font-weight: 700;
+}
+
+.form-input,
+.form-textarea {
+    width: 100%;
+    padding: 0.65rem 0.85rem;
+    font-family: inherit;
+    font-size: 0.95rem;
+    color: #111;
+    background: #fff;
+    border: 1px solid #d1d5db;
+    border-radius: 0.5rem;
+    transition: border-color 0.15s ease, box-shadow 0.15s ease;
+}
+
+.form-input::placeholder,
+.form-textarea::placeholder {
+    color: #9ca3af;
+}
+
+.form-input:hover,
+.form-textarea:hover {
+    border-color: #9ca3af;
+}
+
+.form-input:focus,
+.form-textarea:focus {
+    outline: none;
+    border-color: #2563eb;
+    box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.15);
+}
+
+.form-textarea {
+    resize: vertical;
+    min-height: 140px;
+}
+
+.form-note {
+    margin: 0;
+    min-height: 1.25em;
+    font-size: 0.85rem;
+    color: #4b5563;
+}
+
+.form-submit {
+    align-self: flex-start;
+    margin-top: 0.25rem;
+    padding: 0.75rem 1.75rem;
+    font-family: inherit;
+    font-size: 0.95rem;
+    font-weight: 600;
+    color: #fff;
+    background: #111;
+    border: none;
+    border-radius: 0.5rem;
+    cursor: pointer;
+    transition: background 0.15s ease, transform 0.1s ease;
+}
+
+.form-submit:hover {
+    background: #374151;
+}
+
+.form-submit:focus-visible {
+    outline: none;
+    box-shadow: 0 0 0 3px rgba(17, 24, 39, 0.25);
+}
+
+.form-submit:active {
+    transform: scale(0.98);
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .form-submit {
+        transition: none;
+    }
+
+    .form-submit:active {
+        transform: none;
+    }
+}
+
+/* ---- Guestbook (방명록) ---- */
+.subpage-main--guestbook {
+    background: #fff;
+    padding-top: 5.25rem;
+    padding-bottom: 3rem;
+}
+
+.guestbook-page {
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 1.25rem 1.5rem 2.5rem;
+}
+
+.guestbook-page__back {
+    display: inline-block;
+    margin-bottom: 1.75rem;
+    font-size: 0.9rem;
+    font-weight: 500;
+    color: #333;
+    text-decoration: none;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.25);
+}
+
+.guestbook-page__back:hover,
+.guestbook-page__back:focus-visible {
+    color: #000;
+    border-bottom-color: #000;
+}
+
+.guestbook-header {
+    margin-bottom: 1.5rem;
+}
+
+.guestbook-title {
+    margin: 0 0 0.5rem;
+    font-size: clamp(1.65rem, 4vw, 2.1rem);
+    font-weight: 700;
+    letter-spacing: -0.03em;
+    color: #111;
+}
+
+.guestbook-sub {
+    margin: 0;
+    font-size: 0.95rem;
+    line-height: 1.65;
+    color: #6b7280;
+}
+
+.visually-hidden {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    white-space: nowrap;
+    border: 0;
+}
+
+.board-wrap {
+    border-radius: 0.75rem;
+    border: 1px solid #e5e7eb;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.06);
+    overflow: hidden;
+    overflow-x: auto;
+    background: #fff;
+}
+
+.board-table {
+    width: 100%;
+    min-width: 520px;
+    border-collapse: collapse;
+    font-size: 0.92rem;
+    color: #111;
+}
+
+.board-table thead th {
+    background: #f9fafb;
+    color: #6b7280;
+    font-weight: 600;
+    padding: 0.85rem 1rem;
+    text-align: left;
+    border-bottom: 1px solid #e5e7eb;
+    white-space: nowrap;
+}
+
+.board-table .col-num-head {
+    width: 4.5rem;
+    text-align: center;
+}
+
+.board-table .col-date-head,
+.board-table .col-hit-head {
+    width: 7rem;
+    text-align: right;
+}
+
+.board-table tbody td {
+    padding: 0.8rem 1rem;
+    border-bottom: 1px solid #f0f0f0;
+    vertical-align: middle;
+}
+
+.board-table tbody tr:last-child td {
+    border-bottom: none;
+}
+
+.board-row--pin {
+    background: #fffbeb;
+}
+
+.board-table .col-num {
+    text-align: center;
+    color: #374151;
+    font-weight: 500;
+}
+
+.badge-notice {
+    font-size: 0.8rem;
+    font-weight: 700;
+    color: #b45309;
+}
+
+.board-table .col-title a {
+    color: #111;
+    text-decoration: none;
+}
+
+.board-table .col-title a:hover,
+.board-table .col-title a:focus-visible {
+    text-decoration: underline;
+}
+
+.board-table .col-date,
+.board-table .col-hit {
+    text-align: right;
+    color: #374151;
+    font-weight: 500;
+    font-variant-numeric: tabular-nums;
+}
+
+.guestbook-note {
+    margin: 1.25rem 0 0;
+    font-size: 0.82rem;
+    line-height: 1.6;
+    color: #9ca3af;
 }

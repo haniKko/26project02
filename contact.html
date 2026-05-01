@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>contact | 손하은</title>
+    <title>문의하기 | 손하은</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Jua&family=Noto+Sans+KR:wght@400;500;600;700&display=swap" rel="stylesheet">
@@ -35,33 +35,72 @@
                     <li><a href="history.html">이력</a></li>
                     <li><a href="portfolio.html">포트폴리오</a></li>
                     <li><a href="contact.html" aria-current="page">contact</a></li>
+                    <li><a href="guestbook.html">방명록</a></li>
                 </ul>
             </nav>
         </div>
     </header>
 
-    <main class="subpage-main">
-        <header class="subpage-hero subpage-hero--contact">
-            <p class="subpage-hero__eyebrow">Contact</p>
-            <h1 class="subpage-hero__title">연락</h1>
-            <p class="subpage-hero__lead">협업·질문·인터뷰 요청 등은 아래 채널로 편하게 보내 주세요. 응답 가능한 시간대를 적어 두어도 좋습니다.</p>
-            <a href="index.html#contact" class="subpage-back">← 메인 풀페이지로</a>
-        </header>
+    <main class="subpage-main subpage-main--contact" id="inquiry">
+        <div class="contact-page">
+            <a href="index.html#contact" class="contact-page__back">← 메인 풀페이지로</a>
 
-        <div class="subpage-sections">
-            <article id="info" class="subpage-block">
-                <h2>문의 안내</h2>
-                <p>이메일·SNS·폼 중 선호하는 연락 방법을 안내해 주세요. 스팸 방지를 위해 이메일 주소는 이미지로 올리거나 일부를 가리는 방법도 있습니다.</p>
-                <p>이메일: <a href="mailto:hello@example.com">hello@example.com</a> (실제 주소로 변경해 주세요.)</p>
-            </article>
-            <article id="channels" class="subpage-block">
-                <h2>채널</h2>
-                <p>GitHub, LinkedIn, Instagram 등 사용 중인 프로필 URL을 목록으로 추가할 수 있습니다.</p>
-            </article>
-            <article id="form-note" class="subpage-block">
-                <h2>폼 연동 안내</h2>
-                <p>Google Forms, Formspree, Netlify Forms 등 외부 폼을 붙이면 이 페이지에서 바로 문의를 받을 수 있습니다. 필요하면 알려 주세요.</p>
-            </article>
+            <div class="contact-layout">
+                <aside class="contact-aside" aria-labelledby="contact-aside-title">
+                    <h1 id="contact-aside-title" class="contact-aside__title">손하은</h1>
+                    <p class="contact-aside__text">
+                        협업·채용·프로젝트 제안 등 문의를 환영합니다. 남겨 주시는 내용을 확인한 뒤 가능한 빨리 회신드릴게요.
+                    </p>
+                    <dl class="contact-details">
+                        <div class="contact-details__row">
+                            <dt class="contact-details__label">주소</dt>
+                            <dd class="contact-details__value">실제 주소가 있다면 이곳에 입력해 주세요. (예: 서울특별시 ○○구 …)</dd>
+                        </div>
+                        <div class="contact-details__row">
+                            <dt class="contact-details__label">이메일</dt>
+                            <dd class="contact-details__value"><a href="mailto:hello@example.com">hello@example.com</a></dd>
+                        </div>
+                        <div class="contact-details__row">
+                            <dt class="contact-details__label">운영 시간</dt>
+                            <dd class="contact-details__value">평일 09:00 ~ 18:00 (주말·공휴일 휴무)</dd>
+                        </div>
+                    </dl>
+                    <p class="contact-aside__link-wrap">
+                        <a href="intro.html" class="contact-aside__link">소개 자세히 보기</a>
+                    </p>
+                </aside>
+
+                <div class="contact-form-column">
+                    <h2 class="contact-form__title">문의 남기기</h2>
+                    <p class="contact-form__lead">
+                        문의 사항을 남겨 주시면 확인 후 연락드리겠습니다. 빠른 회신을 위해 연락 가능한 번호와 이메일을 정확히 적어 주세요.
+                    </p>
+                    <form class="contact-form" id="contact-form" action="#" method="post" novalidate>
+                        <div class="form-group">
+                            <label class="form-label" for="cf-name">이름 <span class="form-required" aria-hidden="true">*</span></label>
+                            <input class="form-input" type="text" id="cf-name" name="name" required autocomplete="name" placeholder="홍길동" />
+                        </div>
+                        <div class="form-group">
+                            <label class="form-label" for="cf-phone">연락처 <span class="form-required" aria-hidden="true">*</span></label>
+                            <input class="form-input" type="tel" id="cf-phone" name="phone" required autocomplete="tel" placeholder="010-0000-0000" />
+                        </div>
+                        <div class="form-group">
+                            <label class="form-label" for="cf-email">이메일 <span class="form-required" aria-hidden="true">*</span></label>
+                            <input class="form-input" type="email" id="cf-email" name="email" required autocomplete="email" placeholder="name@example.com" />
+                        </div>
+                        <div class="form-group">
+                            <label class="form-label" for="cf-subject">제목 <span class="form-required" aria-hidden="true">*</span></label>
+                            <input class="form-input" type="text" id="cf-subject" name="subject" required placeholder="문의 제목을 입력해 주세요" />
+                        </div>
+                        <div class="form-group">
+                            <label class="form-label" for="cf-message">문의 내용 <span class="form-required" aria-hidden="true">*</span></label>
+                            <textarea class="form-textarea" id="cf-message" name="message" required rows="6" placeholder="문의 내용을 자세히 적어 주세요."></textarea>
+                        </div>
+                        <p class="form-note" id="form-submit-note" role="status" aria-live="polite"></p>
+                        <button type="submit" class="form-submit">문의 보내기</button>
+                    </form>
+                </div>
+            </div>
         </div>
     </main>
 
@@ -118,13 +157,47 @@
             </nav>
             <nav class="footer-col" aria-label="연락 하위 메뉴">
                 <h3 class="footer-col__title">contact</h3>
-                <ul class="footer-col__list">
-                    <li><a href="contact.html#info">문의 안내</a></li>
-                    <li><a href="mailto:hello@example.com">이메일 보내기</a></li>
-                    <li><a href="index.html#site-footer">푸터 정보</a></li>
-                </ul>
+                    <ul class="footer-col__list">
+                        <li><a href="contact.html#inquiry">문의 남기기</a></li>
+                        <li><a href="guestbook.html">방명록</a></li>
+                        <li><a href="mailto:hello@example.com">이메일 보내기</a></li>
+                        <li><a href="index.html#site-footer">푸터 정보</a></li>
+                    </ul>
             </nav>
         </div>
     </footer>
+
+    <script>
+        (function () {
+            var form = document.getElementById("contact-form");
+            var note = document.getElementById("form-submit-note");
+            var mailTo = "hello@example.com";
+
+            form.addEventListener("submit", function (e) {
+                e.preventDefault();
+                if (!form.reportValidity()) return;
+
+                var name = document.getElementById("cf-name").value.trim();
+                var phone = document.getElementById("cf-phone").value.trim();
+                var email = document.getElementById("cf-email").value.trim();
+                var subject = document.getElementById("cf-subject").value.trim();
+                var message = document.getElementById("cf-message").value.trim();
+
+                var body =
+                    "이름: " + name + "\n" +
+                    "연락처: " + phone + "\n" +
+                    "이메일: " + email + "\n\n" +
+                    message;
+
+                var href =
+                    "mailto:" + encodeURIComponent(mailTo) +
+                    "?subject=" + encodeURIComponent("[문의] " + subject) +
+                    "&body=" + encodeURIComponent(body);
+
+                note.textContent = "메일 앱이 열리면 발송을 완료해 주세요. 열리지 않으면 " + mailTo + " 로 직접 보내 주세요.";
+                window.location.href = href;
+            });
+        })();
+    </script>
 </body>
 </html>

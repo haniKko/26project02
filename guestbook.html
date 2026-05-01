@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>이력 | 손하은</title>
+    <title>방명록 | 손하은</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Jua&family=Noto+Sans+KR:wght@400;500;600;700&display=swap" rel="stylesheet">
@@ -32,36 +32,70 @@
             <nav aria-label="주요 메뉴">
                 <ul class="nav">
                     <li><a href="intro.html">소개</a></li>
-                    <li><a href="history.html" aria-current="page">이력</a></li>
+                    <li><a href="history.html">이력</a></li>
                     <li><a href="portfolio.html">포트폴리오</a></li>
                     <li><a href="contact.html">contact</a></li>
-                    <li><a href="guestbook.html">방명록</a></li>
+                    <li><a href="guestbook.html" aria-current="page">방명록</a></li>
                 </ul>
             </nav>
         </div>
     </header>
 
-    <main class="subpage-main">
-        <header class="subpage-hero subpage-hero--history">
-            <p class="subpage-hero__eyebrow">Experience</p>
-            <h1 class="subpage-hero__title">이력</h1>
-            <p class="subpage-hero__lead">학습과 경험의 흐름을 시간 순으로 정리해 두는 공간입니다. 표나 타임라인으로 바꿔도 좋아요.</p>
-            <a href="index.html#history" class="subpage-back">← 메인 풀페이지로</a>
-        </header>
+    <main class="subpage-main subpage-main--guestbook">
+        <div class="guestbook-page">
+            <a href="index.html#intro" class="guestbook-page__back">← 메인으로</a>
 
-        <div class="subpage-sections">
-            <article id="education" class="subpage-block">
-                <h2>학력</h2>
-                <p>졸업(예정) 학교, 전공, 재학 기간을 적어 주세요. 논문·졸업 작품이 있다면 한 줄로 요약해 보아도 좋습니다.</p>
-            </article>
-            <article id="experience" class="subpage-block">
-                <h2>경력 · 활동</h2>
-                <p>인턴, 아르바이트, 동아리, 봉사, 프로젝트 등 경험을 나열할 수 있습니다. 역할과 성과를 짧게 쓰면 읽기 쉽습니다.</p>
-            </article>
-            <article id="awards" class="subpage-block">
-                <h2>자격 · 수상</h2>
-                <p>취득한 자격증, 공모전 수상, 교내외 활동에서의 인정 등을 연도별로 정리해 보세요.</p>
-            </article>
+            <header class="guestbook-header">
+                <h1 class="guestbook-title">방명록</h1>
+                <p class="guestbook-sub">방문 인사와 응원의 글을 남겨 주세요. 운영 정책에 맞지 않는 글은 삭제될 수 있습니다.</p>
+            </header>
+
+            <div class="board-wrap">
+                <table class="board-table">
+                    <caption class="visually-hidden">방명록 글 목록</caption>
+                    <thead>
+                        <tr>
+                            <th scope="col" class="col-num-head">번호</th>
+                            <th scope="col">제목</th>
+                            <th scope="col" class="col-date-head">작성일</th>
+                            <th scope="col" class="col-hit-head">조회</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr class="board-row board-row--pin">
+                            <td class="col-num"><span class="badge-notice">공지</span></td>
+                            <td class="col-title"><a href="#">방명록 이용 안내</a></td>
+                            <td class="col-date">2026-05-01</td>
+                            <td class="col-hit">428</td>
+                        </tr>
+                        <tr class="board-row board-row--pin">
+                            <td class="col-num"><span class="badge-notice">공지</span></td>
+                            <td class="col-title"><a href="#">손하은 소개 페이지에 오신 것을 환영합니다</a></td>
+                            <td class="col-date">2026-04-15</td>
+                            <td class="col-hit">612</td>
+                        </tr>
+                        <tr class="board-row">
+                            <td class="col-num">12</td>
+                            <td class="col-title"><a href="#">응원의 한마디 남깁니다</a></td>
+                            <td class="col-date">2026-04-28</td>
+                            <td class="col-hit">89</td>
+                        </tr>
+                        <tr class="board-row">
+                            <td class="col-num">11</td>
+                            <td class="col-title"><a href="#">포트폴리오 잘 봤어요</a></td>
+                            <td class="col-date">2026-04-22</td>
+                            <td class="col-hit">203</td>
+                        </tr>
+                        <tr class="board-row">
+                            <td class="col-num">10</td>
+                            <td class="col-title"><a href="#">좋은 하루 되세요</a></td>
+                            <td class="col-date">2026-04-18</td>
+                            <td class="col-hit">156</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            <p class="guestbook-note">실제 방명록 기능은 게시판 프로그램·외부 서비스와 연동하면 글쓰기·댓글이 가능합니다. 지금은 디자인용 목록입니다.</p>
         </div>
     </main>
 
@@ -118,12 +152,12 @@
             </nav>
             <nav class="footer-col" aria-label="연락 하위 메뉴">
                 <h3 class="footer-col__title">contact</h3>
-                    <ul class="footer-col__list">
-                        <li><a href="contact.html#inquiry">문의 남기기</a></li>
-                        <li><a href="guestbook.html">방명록</a></li>
-                        <li><a href="mailto:hello@example.com">이메일 보내기</a></li>
-                        <li><a href="index.html#site-footer">푸터 정보</a></li>
-                    </ul>
+                <ul class="footer-col__list">
+                    <li><a href="contact.html#inquiry">문의 남기기</a></li>
+                    <li><a href="guestbook.html">방명록</a></li>
+                    <li><a href="mailto:hello@example.com">이메일 보내기</a></li>
+                    <li><a href="index.html#site-footer">푸터 정보</a></li>
+                </ul>
             </nav>
         </div>
     </footer>
