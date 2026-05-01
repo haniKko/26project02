@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="ko" class="subpage">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>포트폴리오 | 손하은</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Jua&family=Noto+Sans+KR:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header class="site-header">
+        <div class="site-header__inner">
+            <a href="index.html#intro" class="logo" aria-label="손하은 소개 페이지 홈">
+                <svg class="logo__mark" viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                    <defs>
+                        <linearGradient id="blobGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+                            <stop offset="0%" style="stop-color: var(--logo-pink)" />
+                            <stop offset="55%" style="stop-color: var(--logo-mint)" />
+                            <stop offset="100%" style="stop-color: var(--logo-lavender)" />
+                        </linearGradient>
+                    </defs>
+                    <path fill="url(#blobGrad)" d="M38.2 18.5c2.8 8.5-1.2 19.8-11.4 24.4-10.3 4.7-22.1 1.4-25.8-7.8-3.6-9.1 1.8-20.5 11.5-25.6 9.7-5.1 22.9.5 25.7 9z" />
+                    <ellipse cx="18" cy="22" rx="2.2" ry="2.8" fill="#2d2d2d" />
+                    <ellipse cx="28" cy="22" rx="2.2" ry="2.8" fill="#2d2d2d" />
+                    <path d="M19 30c2.2 2.8 6.8 2.8 9 0" fill="none" stroke="#2d2d2d" stroke-width="2" stroke-linecap="round" />
+                    <circle cx="36" cy="14" r="3" fill="#ffd93d" opacity="0.95" />
+                </svg>
+                <span class="logo__text">손하<span>은</span></span>
+            </a>
+            <nav aria-label="주요 메뉴">
+                <ul class="nav">
+                    <li><a href="intro.html">소개</a></li>
+                    <li><a href="history.html">이력</a></li>
+                    <li><a href="portfolio.html" aria-current="page">포트폴리오</a></li>
+                    <li><a href="contact.html">contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main class="subpage-main">
+        <header class="subpage-hero subpage-hero--portfolio">
+            <p class="subpage-hero__eyebrow">Portfolio</p>
+            <h1 class="subpage-hero__title">포트폴리오</h1>
+            <p class="subpage-hero__lead">대표 작업과 진행 중인 프로젝트를 모아 두는 곳입니다. 썸네일·링크·설명을 추가해 보세요.</p>
+            <a href="index.html#portfolio" class="subpage-back">← 메인 풀페이지로</a>
+        </header>
+
+        <div class="subpage-sections">
+            <article id="featured" class="subpage-block">
+                <h2>대표 작업</h2>
+                <p>가장 자신 있거나 많이 노출하고 싶은 작업 1~3개를 소개합니다. 문제 정의, 역할, 결과를 짧게 쓰면 좋습니다.</p>
+            </article>
+            <article id="projects" class="subpage-block">
+                <h2>프로젝트 목록</h2>
+                <p>전체 프로젝트를 카드 리스트나 표로 나열할 수 있습니다. GitHub·Figma·데모 URL을 함께 두면 방문자가 이해하기 쉽습니다.</p>
+            </article>
+            <article id="stack" class="subpage-block">
+                <h2>기술 스택</h2>
+                <p>주로 사용하는 언어, 프레임워크, 디자인 도구를 정리해 두세요. 팀 프로젝트에서의 협업 도구도 포함할 수 있습니다.</p>
+            </article>
+        </div>
+    </main>
+
+    <footer class="page-footer">
+        <div class="footer-grid">
+            <div class="footer-brand">
+                <a href="index.html#intro" class="footer-brand__logo" aria-label="손하은 소개 페이지 맨 위로">
+                    <svg class="logo__mark" viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                        <defs>
+                            <linearGradient id="blobGradFooter" x1="0%" y1="0%" x2="100%" y2="100%">
+                                <stop offset="0%" style="stop-color: var(--logo-pink)" />
+                                <stop offset="55%" style="stop-color: var(--logo-mint)" />
+                                <stop offset="100%" style="stop-color: var(--logo-lavender)" />
+                            </linearGradient>
+                        </defs>
+                        <path fill="url(#blobGradFooter)" d="M38.2 18.5c2.8 8.5-1.2 19.8-11.4 24.4-10.3 4.7-22.1 1.4-25.8-7.8-3.6-9.1 1.8-20.5 11.5-25.6 9.7-5.1 22.9.5 25.7 9z" />
+                        <ellipse cx="18" cy="22" rx="2.2" ry="2.8" fill="#2d2d2d" />
+                        <ellipse cx="28" cy="22" rx="2.2" ry="2.8" fill="#2d2d2d" />
+                        <path d="M19 30c2.2 2.8 6.8 2.8 9 0" fill="none" stroke="#2d2d2d" stroke-width="2" stroke-linecap="round" />
+                        <circle cx="36" cy="14" r="3" fill="#ffd93d" opacity="0.95" />
+                    </svg>
+                    <span class="logo__text">손하<span>은</span></span>
+                </a>
+                <ul class="footer-brand__details">
+                    <li>손하은 · 개인 소개 페이지</li>
+                    <li>이메일: <a href="mailto:hello@example.com">hello@example.com</a></li>
+                    <li>GitHub · Instagram 등 SNS 링크는 실제 주소로 바꿔 주세요.</li>
+                </ul>
+                <p class="footer-copy">© 2026 손하은 · ALL RIGHTS RESERVED</p>
+            </div>
+            <nav class="footer-col" aria-label="소개 하위 메뉴">
+                <h3 class="footer-col__title">소개</h3>
+                <ul class="footer-col__list">
+                    <li><a href="intro.html#greeting">인사말</a></li>
+                    <li><a href="intro.html#interests">관심 분야</a></li>
+                    <li><a href="intro.html#skills">스킬 · 키워드</a></li>
+                </ul>
+            </nav>
+            <nav class="footer-col" aria-label="이력 하위 메뉴">
+                <h3 class="footer-col__title">이력</h3>
+                <ul class="footer-col__list">
+                    <li><a href="history.html#education">학력</a></li>
+                    <li><a href="history.html#experience">경력 · 활동</a></li>
+                    <li><a href="history.html#awards">자격 · 수상</a></li>
+                </ul>
+            </nav>
+            <nav class="footer-col" aria-label="포트폴리오 하위 메뉴">
+                <h3 class="footer-col__title">포트폴리오</h3>
+                <ul class="footer-col__list">
+                    <li><a href="portfolio.html#featured">대표 작업</a></li>
+                    <li><a href="portfolio.html#projects">프로젝트 목록</a></li>
+                    <li><a href="portfolio.html#stack">기술 스택</a></li>
+                </ul>
+            </nav>
+            <nav class="footer-col" aria-label="연락 하위 메뉴">
+                <h3 class="footer-col__title">contact</h3>
+                <ul class="footer-col__list">
+                    <li><a href="contact.html#info">문의 안내</a></li>
+                    <li><a href="mailto:hello@example.com">이메일 보내기</a></li>
+                    <li><a href="index.html#site-footer">푸터 정보</a></li>
+                </ul>
+            </nav>
+        </div>
+    </footer>
+</body>
+</html>
